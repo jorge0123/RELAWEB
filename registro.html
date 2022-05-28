@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Registro</title>
+<link rel="stylesheet" href="style.css">
+<center>
+<script>
+		function comprobarClave(){
+			clave1 = document.f1.clave1.value
+			clave2 = document.f1.clave2.value
+
+			if (clave1 == "marroquin" && clave2 == "zepeda"){
+			alert("los datos coinciden...\n Pase adelante.");
+			var href ="enlace2.html";
+			window.location=href;
+    }
+
+    else{
+    	alert("las dos claves son distintas...\n intente nuevamente.");
+    	var href = "index.html";
+    	window.location=href;
+    }
+
+  }
+</script>
+</head>
+
+<body>
+
+<center>
+
+	</center>
+	<article id="grt">
+   	<h1><font color="blue sky"> PUEDES INGRESAR A LA PAGINA SOLO SI LOS DATOS SON CORRECTOS</h1>
+	<br>
+	debes escribir los datos correctos y java te dira sin son los correctos
+</article>
+</section>
+</nav>
+
+	<br>
+	<form action="" name="f1" style="text-align ">
+		CORREO (MARROQUIN):<br> <input type="password" name ="clave1" size="20">
+		<br>
+		PON TU CONTRASEÑA (ZEPEDA)<br>
+		<input type="password" name ="clave2" size="20">
+		<br>
+		<input type="button" value=" Verificar si son iguales "  onclick="comprobarClave()  " >
+
+	</form>
+</article>
+</section>
+</center>
+
+ </body>
+ </html>
