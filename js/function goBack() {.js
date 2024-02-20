@@ -2,17 +2,43 @@ function goBack() {
     window.history.back();
 }
 
-function generateInvoice() {
-    // Aquí puedes implementar la lógica para generar la factura
-    alert("Factura generada correctamente");
-}
-
 document.getElementById("paymentForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    // Aquí puedes agregar la lógica de validación de los datos del formulario antes de enviarlos
-    // Por ejemplo, puedes verificar si la tarjeta de crédito es válida, etc.
+    // Obteniendo los valores del formulario
+    const name = document.getElementById("name").value;
+    const cardNumber = document.getElementById("cardNumber").value;
+    const expiration = document.getElementById("expiration").value;
+    const cvv = document.getElementById("cvv").value;
+
+    // Validación básica de los datos del formulario
+    if (name.trim() === "" || cardNumber.trim() === "" || expiration.trim() === "" || cvv.trim() === "") {
+        alert("Por favor complete todos los campos del formulario.");
+        return;
+    }
+
+    // Generando la factura
+    const invoice = `Nombre: ${name}\nNúmero de Tarjeta: ${cardNumber}\nFecha de Expiración: ${expiration}\nCVV: ${cvv}`;
+
+    // Guardando la factura como un archivo de texto
+    download("factura.txt", invoice);
+
+    // Mensaje de pago exitoso
     alert("Pago procesado correctamente");
-    // Aquí normalmente enviarías los datos a tu servidor para procesar el pago
+
+    // Limpieza del formulario después del pago
+    document.getElementById("paymentForm").reset();
 });
 
-document.getElementById("generateInvoice").addEventListener("click", generateInvoice);
+// Función para descargar el archivo de texto
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
