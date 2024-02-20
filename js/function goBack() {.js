@@ -1,9 +1,6 @@
-function goBack() {
-    window.history.back();
-}
-
 document.getElementById("paymentForm").addEventListener("submit", function(event) {
     event.preventDefault();
+
     // Obteniendo los valores del formulario
     const name = document.getElementById("name").value;
     const cardNumber = document.getElementById("cardNumber").value;
@@ -19,8 +16,11 @@ document.getElementById("paymentForm").addEventListener("submit", function(event
     // Generando la factura
     const invoice = `Nombre: ${name}\nNúmero de Tarjeta: ${cardNumber}\nFecha de Expiración: ${expiration}\nCVV: ${cvv}`;
 
-    // Guardando la factura como un archivo de texto
+    // Descargando la factura como un archivo de texto
     download("factura.txt", invoice);
+
+    // Mostrando el botón de descarga
+    document.getElementById("downloadInvoice").style.display = "block";
 
     // Mensaje de pago exitoso
     alert("Pago procesado correctamente");
@@ -31,14 +31,15 @@ document.getElementById("paymentForm").addEventListener("submit", function(event
 
 // Función para descargar el archivo de texto
 function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
+    var element = document.createElement("a");
+    element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(text));
+    element.setAttribute("download", filename);
 
-    element.style.display = 'none';
+    element.style.display = "none";
     document.body.appendChild(element);
 
     element.click();
 
     document.body.removeChild(element);
 }
+
