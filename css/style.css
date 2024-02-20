@@ -53,7 +53,7 @@ img {
 }
 
 #banner-wrapper {
-  max-width: 120px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 0 3% 0;
 }
@@ -68,7 +68,7 @@ header {
 header #logo img{
   margin: 50px;
   float: left;
-  width: 120px;
+  width: 1200px;
 }
 
 /* NAVIGATION*/
@@ -104,7 +104,6 @@ nav ul li a {
 a:hover {
   color: #a5bdcd;
 }
-/*
 .slider {
   max-width: 1200px;
 }
