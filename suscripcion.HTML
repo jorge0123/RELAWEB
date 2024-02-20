@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Cobro Online</title>
+</head>
+<body>
+    <h1>Plataforma de Cobro Online</h1>
+    
+    <form id="payment-form">
+        <label for="card-number">Número de Tarjeta:</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+        
+        <label for="card-expiry">Fecha de Expiración:</label>
+        <input type="text" id="card-expiry" placeholder="MM/AA" required>
+        
+        <label for="card-cvc">CVC:</label>
+        <input type="text" id="card-cvc" placeholder="123" required>
+        
+        <button type="submit">Pagar</button>
+    </form>
+
+    <div id="payment-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
