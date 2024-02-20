@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Cobro Online</title>
+    <title>Suscripción Online</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <h1>Plataforma de Cobro Online</h1>
-    
-    <form id="payment-form">
-        <label for="card-number">Número de Tarjeta:</label>
-        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
-        
-        <label for="card-expiry">Fecha de Expiración:</label>
-        <input type="text" id="card-expiry" placeholder="MM/AA" required>
-        
-        <label for="card-cvc">CVC:</label>
-        <input type="text" id="card-cvc" placeholder="123" required>
-        
-        <button type="submit">Pagar</button>
-    </form>
-
-    <div id="payment-message"></div>
-
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>Suscripción Online</h1>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="plan">Plan:</label>
+            <select id="plan" name="plan">
+                <option value="plan1">Plan 1</option>
+                <option value="plan2">Plan 2</option>
+                <option value="plan3">Plan 3</option>
+            </select>
+            
+            <input type="submit" value="Suscribirse">
+        </form>
+    </div>
 </body>
 </html>
