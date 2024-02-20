@@ -59,8 +59,8 @@ img {
 }
 
 header {
-  width: 50%;
-  height: 100px;
+  width: 90%;
+  height: 120px;
   top: 0;
   left: 0;
 }
@@ -68,7 +68,7 @@ header {
 header #logo img{
   margin: 50px;
   float: left;
-  width: 100px;
+  width: 120px;
 }
 
 /* NAVIGATION*/
@@ -104,10 +104,10 @@ nav ul li a {
 a:hover {
   color: #a5bdcd;
 }
-.slider {
-  max-width: 120px;
-}
 /*
+.slider {
+  max-width: 1200px;
+}
 .slider img {
   width: 100%;
   max-width: 1200px;
