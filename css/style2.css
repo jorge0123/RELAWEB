@@ -28,8 +28,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
-select {
+input[type="number"] {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -47,4 +46,17 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c82333;
 }
