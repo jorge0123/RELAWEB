@@ -64,6 +64,20 @@ header {
   top: 0;
   left: 0;
 }
+.contenedor img{
+  opacity: 0;
+  transform: scale(0.9);
+  transition: 1.7s ease-in-out all;
+}
+
+.contenedor img.derecha{
+  transform: translateX(100px);
+}
+
+.contenedor img.visible{
+  opacity: 1;
+  transform: scale(1)translateX(0);
+}
 
 header #logo img{
   margin: 10px;
@@ -76,6 +90,7 @@ nav {
   float: right;
   padding: 60px 20px 0px 0px;
 }
+div
 
 #menu-icon {
   display: none;
@@ -104,14 +119,22 @@ nav ul li a {
 a:hover {
   color: #a5bdcd;
 }
-/*
 .slider {
-  max-width: 1200px;
+  max-width: 400px;
+  float: center;
 }
 .slider img {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1000px;
+  float: left
+}
+div #P1{
+  width: 400px;
+  height: 330px;
+  background-color: rgb(250, 246, 246);
+  float: right;
+}
+/*div #nav1{
 }*/
 
 .one-third {
@@ -154,6 +177,57 @@ a:hover {
   height: auto;
   padding: 1%;
 }
+main {
+  padding: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
 /* ONE THIRD PADDING*/
 .one-third-padding {
@@ -161,15 +235,22 @@ a:hover {
   float: left;
   margin: 2% 2%;
 }
-
 .clearfix-padding {
   clear: both;
   padding: 3%;
 }
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}
 
 footer {
-  background: #2c3e50;
-  width: 100%;
+  background: #000102;
+  width: 98%;
   overflow: auto;
 }
 .icon-text {
