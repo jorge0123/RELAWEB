@@ -7,7 +7,7 @@
 body {
   background: white;
   font-family: sans-serif;
-  margin: 0 auto;
+  margin: -1%;
 }
 
 p {
@@ -60,9 +60,7 @@ img {
 
 header {
   width: 90%;
-  height: 120px;
-  top: 0;
-  left: 0;
+  height: 170px;
 }
 .contenedor img{
   opacity: 0;
@@ -80,9 +78,10 @@ header {
 }
 
 header #logo img{
-  margin: 10px;
+  margin: 30px;
+  height: 90px;
   float: left;
-  width: 110px;
+  width: 100px;
 }
 
 /* NAVIGATION*/
